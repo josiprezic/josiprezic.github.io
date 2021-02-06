@@ -1,0 +1,37 @@
+# SITE CONFIGURATION
+url: "https://josiprezic.github.io"
+
+author: Josip Rezić
+title:  josiprezic.github.io
+logo:   josiprezic.png
+description: "Josip Rezić's iOS security blog"
+
+excerpt_separator: "<!--more-->"
+
+social:
+  - icon:           rss
+    url:            /feed.xml
+    description:    RSS feed
+  - icon:           twitter
+    url:            https://twitter.com/josip_rezic
+    description:    Twitter
+  - icon:           github
+    url:            https://github.com/josiprezic
+    description:    Github
+  - icon:           envelope
+    url:            mailto:return.rezultat@gmail.com
+    description:    Email
+
+permalink: /:year/:month/:title/
+
+paginate: 16
+paginate_path: "page/:num"
+post_navigation: true
+
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
