@@ -5,9 +5,9 @@
 *.pic
 
 # jekyll debug
-_site
+# _site
 
-# Jeykll Gemfile.lock
+# Jekyll Gemfile.lock
 Gemfile.lock
 
 # yui-compressor
