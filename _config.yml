@@ -6,42 +6,42 @@
 
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-#--------------------------
+# --------------------------
+title: Abhish Khanal                            # the main title
 
-title: OxDeed                          # the main title
-
-tagline: Hackthebox Vault # it will display as the sub-title
+tagline: I am a robotics engineer working in the field of control, estimation, navigation of aerial and ground robots. I love RL.  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  Blog de Ciberseguridad/Infosec | Writeups Máquinas de Hackthebox activas/retiradas | Red Teaming - Hacking
+  A minimal, portfolio, sidebar,
+  bootstrap Jekyll theme with responsive web design
+  and focuses on text presentation.
 
-# Replace with the website url, e.g. 'https://username.github.io'
+# fill in the base hostname & protocol for your site, e.g., 'https://username.github.io'
 url: 'https://josiprezic.github.io'
 
-author: Oxdeed                  # change to your full name
+author: Abhish Khanal                  # change to your full name
 
 avatar: /assets/img/sample/avatar.jpg   # support internet resources
 
 github:
-  username: 0xDeed             # change to your github username
+  username: aabs7             # change to your github username
 
 twitter:
-  username: 0xdedmuz  # change to your twitter username
+  username: abheeshkhanal            # change to your twitter username
 
 social:
-  name: OxDeed                  # it will shows as the copyright owner in Footer
-  email: 0xdedmuz@gmail.com             # change to your email address
+  name: Abhish Khanal                  # it will shows as the copyright owner in Footer
+  email: abheeshkhanal@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/0xdedmuz      # change to your twitter homepage
-    - https://github.com/0xDeed       # change to your github homepage
+    - https://twitter.com/abheeshkhanal      # change to your twitter homepage
+    - https://github.com/aabs7       # change to your github homepage
     # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.facebook.com/aabs7
+    - https://www.linkedin.com/in/aabs7
 
 google_site_verification: google_meta_tag_verification # change to your verification string
-
-#--------------------------
+# --------------------------
 
 
 # Only if your site type is GitHub Project sites and doesn't have a custom domain,
@@ -49,7 +49,7 @@ google_site_verification: google_meta_tag_verification # change to your verifica
 baseurl: ''
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: America/Argentina/Buenos_Aires
+timezone: Asia/Kathmandu
 
 google_analytics:
   id: ''          # Fill with your Google Analytics ID
@@ -67,31 +67,29 @@ disqus:
   shortname: ''    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 
-# Prefer color scheme setting, available values:
+# Prefer color scheme setting.
 #
-#     dual   - Follow the system prefer color by default, and a toggle will display
-#              in the left bottom of Sidebar, which used for switch the theme between dark and light.
+# Note: Keep empty will follow the system prefer color by default,
+# and there will be a toggle to switch the theme between dark and light
+# on the bottom left of the sidebar.
+#
+# Available options:
 #
 #     light  - Use the light color scheme
 #
 #     dark   - Use the dark color scheme
 #
-theme_mode: dual
+theme_mode:   # <light|dark>
 
-# boolean type, global switch for ToC in posts.
+# boolean type, the global switch for ToC in posts.
 toc: true
 
 paginate: 10
 
-markdown: kramdown
-
-highlighter: rouge
-
 kramdown:
-  input: GFM
   syntax_highlighter: rouge
-  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
-    css_class: 'highlight'
+  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
     # default_lang: console
     span:
       line_numbers: false
@@ -103,16 +101,22 @@ kramdown:
 # or you think you're smart enough to change other relevant URLs within this template.
 permalink: /posts/:title/
 
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+
 defaults:
   -
     scope:
-      path: ""          # An empty string here means all files in the project
+      path: ''          # An empty string here means all files in the project
       type: posts
     values:
       layout: post
       comments: true    # Enable comments in posts.
       toc: true         # Display TOC column in posts.
-      location: Post
+      math: true
       breadcrumb:
         -
           label: Posts
@@ -124,10 +128,15 @@ defaults:
       comments: false
   -
     scope:
+      path: index.html
+    values:
+      breadcrumb:
+        -
+          label: Posts
+  -
+    scope:
       path: tags
     values:
-      tab_active: Tags
-      location: Tag
       breadcrumb:
         -
           label: Home
@@ -135,16 +144,21 @@ defaults:
         -
           label: Tags
           url: /tabs/tags/
- 
- 
- 
- 
- 
- 
- 
   -
     scope:
-      path: tabs
+      path: categories
+    values:
+      breadcrumb:
+        -
+          label: Home
+          url: /
+        -
+          label: Categories
+          url: /tabs/categories/
+  -
+    scope:
+      path: ''
+      type: tabs             # see `site.collections`
     values:
       layout: page
       dynamic_title: true    # Hide title in mobile screens.
@@ -152,7 +166,6 @@ defaults:
         -
           label: Home
           url: /
-
 
 sass:
   sass_dir: /assets/css
@@ -165,10 +178,10 @@ compress_html:
   profile: false
   blanklines: false
   ignore:
-    envs: []
+    envs: [development]
 
 exclude:
-  - vendor        # Avoid Jekyll mistakenly read the vendor directory on Travis-CI's VM .
+  - vendor
   - Gemfile.lock
   - Gemfile
   - tools
@@ -176,17 +189,11 @@ exclude:
   - README.md
   - LICENSE
 
-sitemap_exclude:  # Sitemap will exclude the following items.
-  fuzzy:
-    - /assets/
-  accurate:
-    - /norobots/
-    - /tabs/
-
-    - /tags/
-    - /posts/
-    - 404.html
-    - feed.xml
-    - sitemap.xml
-    - robots.txt
-    - redirects.json
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
