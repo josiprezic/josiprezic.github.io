@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - 'main'
-    branches-ignore:
-      - 'production'
+    #branches-ignore:
+    #  - 'production'
     tags-ignore:
       - '*'
     paths-ignore:
