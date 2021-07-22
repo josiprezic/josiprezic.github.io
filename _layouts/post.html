@@ -7,6 +7,8 @@ layout: default
 # MIT Licensed
 ---
 
+
+
 <div class="row">
 
   <div id="post-wrapper" class="col-12 col-lg-11 col-xl-8">
@@ -31,10 +33,22 @@ layout: default
         </div>
 
         <!-- lastmod -->
-        {% if page.last_modified_at %}
+        {%- capture filename -%}
+          {{ page.url | split: "/" | last }}
+        {%- endcapture -%}
+
+        {% for item in site.data.updates %}
+          {% assign encode_filename = item.filename | url_encode %}
+          {% if filename == encode_filename %}
+            {% assign lastmod = item.lastmod %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% if lastmod %}
         <div>
           Updated
-          {% include timeago.html date=page.last_modified_at class="lastmod" tooltip=true %}
+          {% include timeago.html date=lastmod class="lastmod" tooltip=true %}
         </div>
         {% endif %}
 
@@ -49,6 +63,7 @@ layout: default
       </div> <!-- .post-meta -->
 
       <div class="post-content">
+
         {%- capture img_placehodler -%}
           data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
         {% endcapture%}
@@ -68,16 +83,6 @@ layout: default
 
       <div class="post-tail-wrapper text-muted">
 
-        <!-- categories -->
-        {% if page.categories.size > 0 %}
-        <div class="post-meta mb-3">
-          <i class="far fa-folder-open fa-fw mr-1"></i>
-          {% for category in page.categories %}
-            <a href='{{ site.baseurl }}/categories/{{ category | replace: ' ', '-' | downcase | url_encode }}/'>{{ category }}</a>
-            {%- unless forloop.last -%}, {%- endunless -%}
-          {% endfor %}
-        </div>
-        {% endif %}
 
         <!-- tags -->
         {% if page.tags.size > 0 %}

@@ -8,7 +8,7 @@
 
 @mixin dark-scheme {
   /* framework */
-  --main-wrapper-bg: rgb(27, 27, 30);
+  --main-wrapper-bg: rgb(11, 11, 11);
   --body-bg: var(--main-wrapper-bg);
   --topbar-wrapper-bg: rgb(39, 40, 43);
   --search-wrapper-bg: rgb(34, 34, 39);
@@ -20,7 +20,7 @@
   /* common color */
   --text-color: rgb(175, 176, 177);
   --text-muted-color: rgb(107, 116, 124);
-  --link-color: rgb(138, 180, 248);
+  --link-color: #008bc7;
   --link-underline-color: rgb(82, 108, 150);
   --main-border-color: rgb(44, 45, 45);
   --button-bg: rgb(39, 40, 43);
@@ -35,7 +35,7 @@
 
   /* Sidebar */
   --nav-cursor-color: rgb(183, 182, 182);
-  --sidebar-bg: radial-gradient(circle, #242424 0%, #1d1f27 100%);
+  --sidebar-bg: radial-gradient(circle, #00202e 0%, #020203 100%);
 
   /* Top Bar */
   --topbar-text-color: var(--text-color);
