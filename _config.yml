@@ -1,46 +1,46 @@
 # The Site Settings
-# v2.0
-# https://github.com/cotes2020/jekyll-theme-chirpy
-# © 2017-2019 Cotes Chung
-# MIT licensed
 
+# the main title
+title: Josip Rezić
 
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-# --------------------------
-title: Abhish Khanal                            # the main title
+# it will display as the sub-title
+tagline: Passionate iOS developer and hardworking Computer Science student.
 
-tagline: I am a robotics engineer working in the field of control, estimation, navigation of aerial and ground robots. I love RL.  # it will display as the sub-title
-
-description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+# used by seo meta and the atom feed
+description: >-
+  iOS, security, programming, software development
 
 # fill in the base hostname & protocol for your site, e.g., 'https://username.github.io'
 url: 'https://josiprezic.github.io'
 
-author: Abhish Khanal                  # change to your full name
+# full name
+author: Josip Rezić
 
-avatar: /assets/img/sample/avatar.jpg   # support internet resources
+# support internet resources
+avatar: /assets/img/sample/avatar.jpg
 
 github:
-  username: aabs7             # change to your github username
+  # change to your github username
+  username: josiprezic
 
 twitter:
-  username: abheeshkhanal            # change to your twitter username
+  # change to your twitter username
+  username: josip_rezic
 
 social:
-  name: Abhish Khanal                  # it will shows as the copyright owner in Footer
-  email: abheeshkhanal@gmail.com             # change to your email address
+  # it will shows as the copyright owner in Footer
+  name: Josip Rezić
+  # change to your email address
+  email: return.rezultat@gmail.com
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/abheeshkhanal      # change to your twitter homepage
-    - https://github.com/aabs7       # change to your github homepage
+    - https://twitter.com/josip_rezic      # change to your twitter homepage
+    - https://github.com/josiprezic       # change to your github homepage
     # Uncomment below to add more social links
-    - https://www.facebook.com/aabs7
-    - https://www.linkedin.com/in/aabs7
+    - https://www.facebook.com/josip.josipowicz.7
+    - https://www.linkedin.com/in/josiprezic
 
-google_site_verification: google_meta_tag_verification # change to your verification string
+google_site_verification: google09d0f5efd0a469ef.html # change to your verification string
 # --------------------------
 
 
@@ -49,7 +49,7 @@ google_site_verification: google_meta_tag_verification # change to your verifica
 baseurl: ''
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Kathmandu
+timezone: Europe/Warsaw
 
 google_analytics:
   id: ''          # Fill with your Google Analytics ID
@@ -79,7 +79,7 @@ disqus:
 #
 #     dark   - Use the dark color scheme
 #
-theme_mode:   # <light|dark>
+theme_mode: dark  # <light|dark>
 
 # boolean type, the global switch for ToC in posts.
 toc: true
