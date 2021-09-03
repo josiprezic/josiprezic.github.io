@@ -5,8 +5,6 @@ categories: [Security]
 tags: [apple,neuralhash,private-set-intersection,threshold-secret-sharing,privacy]
 ---
 
-# Technologies Behind the Apple’s CSAM Detection System
-
 **A few weeks ago Apple announced its new system that will scan iCloud for illegal child sexual abuse materials or CSAM. CSAM detection enables Apple to accurately identify and report iCloud users who store known CSAM material in their iCloud Photos accounts.**
 
 # Introduction
